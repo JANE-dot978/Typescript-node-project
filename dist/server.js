@@ -25,8 +25,6 @@ app.use((req, res) => {
     res.status(404).send(`Route ${req.method} ${req.url} not found`);
 });
 // ✅ Global Error Handler
-//hhhhhh/
-//nnjnj//
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ message: "Internal Server Error" });
